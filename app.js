@@ -1,144 +1,44 @@
-// function factorial(num) {
-//   if (num === 1) {
-//     return num;
-//   } else {
-//     return num * factorial(num - 1);
-//   }
-// }
-// console.log(factorial(4));
-
-// function add(sum) {
-//   console.log(sum);
-// }
-
-// const sum = () => {
-//   let a = 10;
-//   let b = 10;
-//   if (a + b === 20) {
-//     console.log(b);
-//   }
-//   return a;
-// };
-// add(sum());
-
-// function add(sum) {
-//   document.body.append(sum);
-// }
-
-// const persons = ["ram", "laxman", "bharat"];
-// const run = () => {
-//   return persons.map((person, idx) => {
-//     return person.toUpperCase();
-//   });
-// };
-// add(run());
-
-// let num = 0;
-
-// const details = {
-//   name: "rama",
-//   age: 20,
-//   city: "bheem gal",
-// };
-
-// const fuck = function greeting(candiate) {
-//   const { name, age, city } = candiate;
-//   console.log(`${city}`);
-// };
-// fuck(details);
-
-// const input = document.querySelector("input");
-// const container = document.querySelector(".container");
-
-// const authors = [
-//   { book: "freedom from unkown", author: "jiddu krishnamurthy", year: 1895 },
-//   { book: "bhagvad geetha", author: "vyasa maharishi", year: 1300 },
-//   { book: "how universe works", author: "neildegradetyson", year: 1995 },
-// ];
-
-// function publishers(persons) {
-//   persons.forEach((person) => {
-//     const list = document.createElement("li");
-//     list.innerHTML = `${person.book} - ${person.author}`;
-//     container.append(list);
-//   });
-// }
-
-// publishers(authors);
-
-// input.addEventListener("input", searching);
-
-// function searching() {
-//   const searchItem = input.value;
-//   const filteredItem = authors.filter(
-//     (person) =>
-//       person.author.toLowerCase().includes(searchItem.toLowerCase()) ||
-//       person.book.toLowerCase().includes(searchItem.toLowerCase())
-//   );
-//   container.innerHTML = "";
-
-//   publishers(filteredItem);
-// }
-
-// let nums = [1, 2, 3, 4, 5, , 7, 8, 9];
-// nums.filter((num) => {
-//   if (num % 2 === 0) {
-//     console.log(num);
-//   }
-// });
-
-// function factorial(num) {
-//   if (num === 1) {
-//     return num;
-//   } else {
-//     return num * factorial(num - 1);
-//   }
-// }
-// console.log(factorial(4));
-
 // first answer
 function print(data) {
   console.log(data);
 }
-const result = function numbers() {
-  let numbers = [1, 2, 3, 4, 5, 6];
-  const newArray = numbers.filter((num) => {
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+const result = function numbers(nums) {
+  const newArray = nums.filter((num) => {
     if (num % 2 === 0) {
       return num;
     }
   });
   return newArray;
 };
-print(result());
+print(result(numbers));
 
 //second answer
+const fruits = ["apple", "banana", "orange", "kiwi"];
 
-function fruitsLength() {
-  const fruits = ["apple", "banana", "orange", "kiwi"];
-
-  const fruitLength = fruits.map((fruit) => {
+const filteredLength = function fruitsLength(numsLength) {
+  const fruitLength = numsLength.map((fruit) => {
     return fruit.length;
   });
   return fruitLength;
-}
-console.log(fruitsLength());
+};
+console.log(filteredLength(fruits));
 
 //third answer
-function doubledNums() {
-  let nums = [1, 2, 3, 4, 5];
-
-  const doubledNum = nums.map((num) => {
+const numsArray = [1, 3, 5, 7, 9];
+const doubledNumbers = function doubledNums(numbers) {
+  const doubledNum = numbers.map((num) => {
     return num + num;
   });
   return doubledNum;
-}
-console.log(doubledNums());
+};
+console.log(doubledNumbers(numsArray));
 
 //fourth answer
+const fruitsArray = ["apple", "banana", "orange", "kiwi"];
 
-const lengthenFruits = function array() {
-  const fruits = ["apple", "banana", "orange", "kiwi"];
-
+const lengthenFruits = function array(fruits) {
   const fruitLength = fruits.filter((fruit) => {
     if (fruit.length > 5) {
       return fruit;
@@ -146,7 +46,7 @@ const lengthenFruits = function array() {
   });
   return fruitLength;
 };
-console.log(lengthenFruits());
+console.log(lengthenFruits(fruitsArray));
 
 //fifth answer
 const persons = [
@@ -155,42 +55,39 @@ const persons = [
   { name: "Doe", age: 30 },
 ];
 
-function print(data) {
-  console.log(data);
-}
-function names() {
-  const names = persons.filter((person) => {
+const personsNames = function names(name) {
+  const names = name.filter((person) => {
     if (person.age > 18) {
       return person;
     }
   });
   return names.map((person) => person.name);
-}
-print(names());
+};
+print(personsNames(persons));
 
 // console.log(personName);
 
 //sixth answer
-function squarenum() {
-  let numbersArray = [1, 2, 3, 4, 5];
+let numbersArray = [1, 2, 3, 4, 5];
 
-  const squareNum = numbersArray.map((num) => {
+const squareNums = function squarenum(numbers) {
+  const squareNum = numbers.map((num) => {
     return num * num;
   });
   return squareNum;
-}
-console.log(squarenum());
+};
+console.log(squareNums(numbersArray));
 
 //seventh answer
-function fruitCapitalize() {
-  const fruitsArray = ["apple", "banana", "orange", "kiwi"];
+const fruitArray = ["apple", "banana", "orange", "kiwi"];
 
-  const fruitCapitalize = fruitsArray.map((fruit) => {
+const editedArray = function fruitCapitalize(fruits) {
+  const fruitCapitalize = fruits.map((fruit) => {
     return fruit[0].toUpperCase() + fruit.slice(1);
   });
   return fruitCapitalize;
-}
-console.log(fruitCapitalize());
+};
+console.log(editedArray(fruitArray));
 
 //eight answer
 const products = [
@@ -198,50 +95,31 @@ const products = [
   { name: "Phone", price: 800 },
   { name: "Tablet", price: 60 },
 ];
-function electronics(product) {
+const devices = function electronics(product) {
   const electronics = product.filter((electronic) => {
     if (electronic.price > 500) {
       return electronic;
     }
   });
   return electronics.map((electronic) => electronic.name);
-}
+};
 
-console.log(electronics(products));
-
-//pure function
-
-function electronics() {
-  const products = [
-    { name: "Laptop", price: 1200 },
-    { name: "Phone", price: 800 },
-    { name: "Tablet", price: 60 },
-  ];
-
-  const electronics = products.filter((electronic) => {
-    if (electronic.price > 500) {
-      return electronic;
-    }
-  });
-  return electronics.map((electronic) => electronic.name);
-}
-
-console.log(electronics());
+console.log(devices(products));
 
 //ninth answer
-function sumOfNums() {
-  let array = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-  ];
+let array = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
 
-  const numbersSum = array.map((num) => {
+const additionOfCurrentNum = function sumOfNums(numbers) {
+  const numbersSum = numbers.map((num) => {
     return num.reduce((current, total) => current + total);
   });
   return numbersSum;
-}
-console.log(sumOfNums());
+};
+console.log(additionOfCurrentNum(array));
 
 //tenth answer
 
@@ -253,27 +131,26 @@ console.log(sumOfNums());
 //   }
 // });
 // console.log(uniqueFruits);
-
-function fruitsDuplicateFilter() {
-  const fruitsDuplicate = [
-    "apple",
-    "apple",
-    "banana",
-    "banana",
-    "orange",
-    "apple",
-    "kiwi",
-  ];
+const fruitsDuplicates = [
+  "apple",
+  "apple",
+  "banana",
+  "banana",
+  "orange",
+  "apple",
+  "kiwi",
+];
+const duplicateDeletion = function fruitsDuplicateFilter(fruits) {
   const uniqueFruits = [];
-  fruitsDuplicate.forEach((fruit) => {
+  fruits.forEach((fruit) => {
     if (!uniqueFruits.includes(fruit)) {
       uniqueFruits.push(fruit);
     }
   });
   return uniqueFruits;
-}
+};
 
-console.log(fruitsDuplicateFilter());
+console.log(duplicateDeletion(fruitsDuplicates));
 
 const fruitsDuplicate = [
   "apple",
