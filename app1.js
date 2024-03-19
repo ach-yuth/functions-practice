@@ -56,6 +56,8 @@ function longestWord(string) {
 }
 console.log(longestWord(sentence));
 
+// sixth answer
+
 const greet = "hello world";
 function capitalize(string) {
   const words = string.split(" ").map((word) => {
@@ -67,14 +69,35 @@ function capitalize(string) {
 
 console.log(capitalize(greet));
 
+//seventh answer
+
 const greeting = "hello";
-function print(string, word) {
-  const repeated = [];
+function repeatingLettersLength(string, checkingLetter) {
+  let repeated = 0;
   string.split("").forEach((letter) => {
-    if (word.includes(letter)) {
-      repeated.push(letter);
+    if (checkingLetter === letter) {
+      repeated++;
     }
   });
-  return repeated.length;
+  return repeated;
 }
-console.log(print(greeting, "l"));
+console.log(repeatingLettersLength  q(greeting, "l"));
+
+//array methods
+//14th answer
+
+let nums = [1, -2, 3, -4, 5];
+
+function filterNumbers(numbers) {
+  let numsCount = 0;
+  let filtering = numbers.filter((num) => {
+    if (num > 0) {
+      return num;
+    }
+  });
+  return (numsCount = filtering.reduce((current, total) => current + total));
+}
+console.log(filterNumbers(nums));
+
+//15th answer
+"Hello", " ", "world";
