@@ -81,7 +81,7 @@ function repeatingLettersLength(string, checkingLetter) {
   });
   return repeated;
 }
-console.log(repeatingLettersLength  q(greeting, "l"));
+console.log(repeatingLettersLength(greeting, "l"));
 
 //array methods
 //14th answer
@@ -90,14 +90,112 @@ let nums = [1, -2, 3, -4, 5];
 
 function filterNumbers(numbers) {
   let numsCount = 0;
-  let filtering = numbers.filter((num) => {
+  numbers.forEach((num) => {
     if (num > 0) {
-      return num;
+      numsCount = num + numsCount;
     }
   });
-  return (numsCount = filtering.reduce((current, total) => current + total));
+  return numsCount;
 }
 console.log(filterNumbers(nums));
 
 //15th answer
-"Hello", " ", "world";
+
+const greetArray = ["Hello", " ", "World"];
+
+function greetingWishes(array) {
+  return array.join("");
+}
+console.log(greetingWishes(greetArray));
+
+//16th answer
+const numbers = [1, 2, 3, 4, 5];
+
+function average(nums) {
+  let numberCount = 0;
+  nums.forEach((num) => {
+    numberCount = num + numberCount;
+  });
+  return numberCount / nums.length;
+}
+console.log(average(numbers));
+
+//17th answer
+const mensData = [
+  { name: "John", age: 30 },
+  { name: "Jane", age: 25 },
+  { name: "Doe", age: 35 },
+];
+
+function person(details) {
+  const filtered = details.filter((detail) => {
+    if (detail.age > 30) {
+      return detail;
+    }
+  });
+  return filtered;
+}
+console.log(person(mensData));
+
+//18th answer
+const arrayNumbers = [
+  [1, 2],
+  [3, 4],
+  [5, 6],
+];
+
+function numbersArray(nums) {
+  return nums.flat();
+}
+console.log(numbersArray(arrayNumbers));
+
+//19th answer
+const duplicateNums = [1, 2, 2, 3, 4, 4, 5];
+
+function number(nums) {
+  let unique = [];
+  nums.forEach((el) => {
+    if (!unique.includes(el)) {
+      unique.push(el);
+    }
+  });
+  return unique;
+}
+console.log(number(duplicateNums));
+
+//20th answer
+const zigZagFruits = ["banana", "apple", "orange"];
+
+function fruitsSort(fruits) {
+  return fruits.sort();
+}
+console.log(fruitsSort(zigZagFruits));
+
+//21st answer
+const arrayNums = [2, 3, 4];
+function multipleNumbers(nums) {
+  let numsCount = 1;
+  nums.forEach((num) => {
+    numsCount = num * numsCount;
+  });
+  return numsCount++;
+}
+console.log(multipleNumbers(arrayNums));
+
+//22nd answer
+const greet1 = ["hello", " ", "world"];
+
+function greetin(greets) {
+  return greets.join("");
+}
+console.log(greetin(greet1));
+
+const numbs = [10, 5, 20, 8];
+
+function difference(nums) {
+  const max = Math.max(...nums);
+  const min = Math.min(...nums);
+  const difference = max - min;
+  return difference;
+}
+console.log(difference(numbs));
