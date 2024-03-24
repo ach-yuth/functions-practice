@@ -199,3 +199,40 @@ function difference(nums) {
   return difference;
 }
 console.log(difference(numbs));
+
+const fruits = ["apple", "banana", "orange", "kiwi"];
+function longestFruit(fruits) {
+  const fruitLength = fruits.map((fruit) => {
+    return fruit.length;
+  });
+  const longestValue = Math.max(...fruitLength);
+  const longestFruit = fruitLength.indexOf(longestValue);
+  return fruits[longestFruit];
+}
+console.log(longestFruit(fruits));
+
+const numsArray = [-2, 5, -8, 10, -3];
+
+function positiveNums(nums) {
+  let positiveNum = 0;
+  nums.filter((num) => {
+    if (num > 0) {
+      return (positiveNum = num + positiveNum);
+    }
+  });
+  return positiveNum;
+}
+console.log(positiveNums(numsArray));
+
+const arrayFruits = ["apple", "banana", "kiwi", "orange"];
+
+function fruitStartWithVowel(fruits) {
+  let filteredFruits = [];
+  fruits.forEach((fruit) => {
+    if (fruit.includes("a")) {
+      filteredFruits.push(fruit);
+    }
+  });
+  return filteredFruits;
+}
+console.log(fruitStartWithVowel(arrayFruits));
